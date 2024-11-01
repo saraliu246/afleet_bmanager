@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Btn/delete</title>
+    <g id="Btn/delete" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-Copy" stroke="#76DDFB" fill="#76DDFB" x="2.5" y="2.5" width="25" height="25" rx="3"></rect>
+        <line x1="22" y1="15.3867898" x2="8" y2="15.3867898" id="Line-Copy" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></line>
+    </g>
+</svg>

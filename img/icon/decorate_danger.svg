@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/decorate_danger</title>
+    <g id="icon/decorate_danger" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M5.56280095,19 L18.4275192,19 C19.0311424,19 19.5593126,18.6204819 19.8233978,18.0722892 C20.0874829,17.4819277 20.0497564,16.8072289 19.7479449,16.2590361 L13.334449,5.75903614 C13.0326374,5.29518072 12.5421936,5 12.0140233,5 C11.4858531,5 10.9954093,5.29518072 10.6935977,5.75903614 L4.28010177,16.2590361 C3.94056375,16.8072289 3.9028373,17.4819277 4.20464888,18.0722892 C4.43100756,18.6626506 4.95917781,19 5.56280095,19 Z" id="Path" stroke="#F21E1E" fill-rule="nonzero"></path>
+        <polygon id="Path" fill="#F21E1E" fill-rule="nonzero" points="13.1966102 13.6 11.1627119 13.6 11 9 13.4 9"></polygon>
+        <polygon id="Path" fill="#F21E1E" fill-rule="nonzero" points="11 17 11 15 13.4 15 13.4 17"></polygon>
+    </g>
+</svg>

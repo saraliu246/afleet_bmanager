@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/notification</title>
+    <g id="icon/notification" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_notifications" transform="translate(4.000000, 4.000000)">
+            <g id="group" transform="translate(2.760000, 1.380000)" stroke="#A2A6AD" stroke-width="1.5">
+                <path d="M5.98,17.25 C5.98,18.7743059 7.21569409,20.01 8.74,20.01 C10.2643059,20.01 11.5,18.7743059 11.5,17.25" id="shape"></path>
+                <line x1="0" y1="17.02" x2="17.0262154" y2="17.02" id="line" stroke-linecap="round"></line>
+                <path d="M1.84,16.56 L1.84,9.2 C1.84,5.38876768 4.93698937,2.3 8.74,2.3 C12.5507648,2.3 15.64,5.38801605 15.64,9.2 L15.64,16.56" id="shape"></path>
+                <line x1="8.74" y1="1.38" x2="8.74" y2="0" id="line" stroke-linecap="round"></line>
+            </g>
+            <rect id="bounds" x="0" y="0" width="23" height="23"></rect>
+        </g>
+    </g>
+</svg>

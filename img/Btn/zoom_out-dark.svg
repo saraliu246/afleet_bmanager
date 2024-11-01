@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Btn/zoom_in-dark</title>
+    <g id="Btn/zoom_in-dark" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Group" transform="translate(7.000000, 7.000000)" stroke="#8C9FAF" stroke-width="1.2">
+            <rect id="Rectangle" x="3.91304348" y="0" width="13" height="13"></rect>
+            <rect id="Rectangle" fill="#485465" x="0" y="3.95833333" width="13" height="13"></rect>
+        </g>
+    </g>
+</svg>

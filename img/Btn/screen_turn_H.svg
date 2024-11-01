@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Btn/screen_turn_H</title>
+    <g id="Btn/screen_turn_H" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(10.000000, 10.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="1.5">
+            <path d="M7.80487805,0 L0.975609756,0 C0.487804878,0 0,0.487804878 0,0.975609756 L0,7.80487805" id="Path"></path>
+            <path d="M20.9756098,7.80487805 L20.9756098,0.975609756 C20.9756098,0.487804878 20.5853659,0 20,0 L13.1707317,0" id="Path"></path>
+            <path d="M13.1707317,20.4878049 L20,20.4878049 C20.5853659,20.4878049 20.9756098,20 20.9756098,19.5121951 L20.9756098,12.6829268" id="Path"></path>
+            <path d="M0,12.6829268 L0,19.5121951 C0,20 0.487804878,20.4878049 0.975609756,20.4878049 L7.80487805,20.4878049" id="Path"></path>
+        </g>
+    </g>
+</svg>

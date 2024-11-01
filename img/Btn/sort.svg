@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Btn/sort</title>
+    <g id="Btn/sort" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polyline id="Fill-74" fill="#DADEE4" fill-rule="nonzero" points="15.1117621 11 11.5 6.97917973 7.88823795 11 7 10.0096576 11.5 5 16 10.0096576 15.1117621 11"></polyline>
+        <polygon id="Fill-75" fill="#DADEE4" fill-rule="nonzero" points="11 6 12.5 6 12.5 21 11 21"></polygon>
+        <polyline id="Fill-74" fill="#DADEE4" fill-rule="nonzero" transform="translate(19.500000, 23.000000) rotate(-180.000000) translate(-19.500000, -23.000000) " points="23.1117621 26 19.5 21.9791797 15.8882379 26 15 25.0096576 19.5 20 24 25.0096576 23.1117621 26"></polyline>
+        <polygon id="Fill-75" fill="#DADEE4" fill-rule="nonzero" transform="translate(19.750000, 17.500000) rotate(-180.000000) translate(-19.750000, -17.500000) " points="19 10 20.5 10 20.5 25 19 25"></polygon>
+    </g>
+</svg>
