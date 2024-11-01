@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LQ82 </title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/dash_cam.css">
+</head>
+<body onload="">    
+<div class="Login_bg">
+    <div class="Img_login"></div>
+    <div class="Login_wrap" id="LoginTable">
+       <h1>LQ82 Dash cam</h1>
+       <div class="Login" >
+            <font>Log in</font>
+            <table>
+                <tr>
+                    <th><span>User name</span><input type="text" placeholder="User name" name="Username" ></th>
+                    <td><div class="opt">
+                        <input type="checkbox" class="magic-checkbox" name="bs_broadcast"  id="bs_broadcast_on" onclick=""/>
+                        <label for="bs_broadcast_on">Remember me</label>
+                    </div></td>
+                </tr>
+                <tr>
+                    <th><span>password</span><input type="password"></th>
+                    <td><button class="BtnLink" id="Btn_ForgotPS" type="button" style="">Forgot password</button></td>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="Btn_wrap">
+                            <ul>
+                                <a href="notification_list.html" class="Btn Btn_blue" id="goLogin">Log in</a>
+                            </ul>
+                        </div>
+                    </th>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="Login_wrap ForgotPSTable" id="ForgotPSTable">
+       <div class="Login" >
+        <font>Forgot password</font>
+        <table >
+            <tr>
+                <th>Please enter your email to request a password reset.</th>
+            </tr>
+            <tr>
+                <th> <input type="password" placeholder="email" /></th>
+            </tr>
+            <tr>
+                <th >
+                    <div class="Btn_wrap">
+                        <ul>
+                            <a href="#" class="Btn Btn_blue">Send</a>
+                        </ul>
+                    </div>
+                </th>
+                <td></td>
+            </tr>
+        </table>
+       </div>
+       <div class="Login" >
+        <font>Email just send to<small>username@gmail.com</small></font>
+        <table >
+            <tr>
+                <th >Please enter the 6 validation code from the email we just send:</th>
+            </tr>
+            <tr>
+               <th> <input class="adadNumber" type="number" placeholder="0" />
+                <input class="adNumber" type="number" placeholder="0" />
+                <input class="adNumber" type="number" placeholder="0" />
+                <input class="adNumber" type="number" placeholder="0" />
+                <input class="adNumber" type="number" placeholder="0" />
+                <input class="adNumber" type="number" placeholder="0" /></th>
+            </tr>
+            <tr>
+                <th><span class="Btn_Resend">Didn't get the email ?</span> <small>59s..resend</small><button type="button" class="Btn">Resend</button></th>
+            </tr>
+            <tr>
+                <th><span>New password</span><input type="text"></th>
+            </tr>
+            <tr>
+                <th><span>Confirm new password</span><input type="text"></th>
+            </tr>
+            <tr>
+                <th colspan="6">
+                    <div class="Btn_wrap">
+                        <ul>
+                            <a href="#" class="Btn Btn_blue">Apply</a>
+                        </ul>
+                    </div>
+                </th>
+                <td></td>
+            </tr>
+        </table>
+       </div>
+       <div class="Login" >
+        <font style="text-align: center; padding: 0 20px;">The password change was successful.</font>
+        <table >
+            <tr>
+                <th><div class="Img_password"></div></th>
+            </tr>
+            
+            <tr>
+                <th colspan="6">
+                    <div class="Btn_wrap">
+                        <ul>
+                            <a href="login.html" class="Btn Btn_blue">Go to login</a>
+                        </ul>
+                    </div>
+                </th>
+                <td></td>
+            </tr>
+        </table>
+       </div>
+       
+    </div>  
+    </div>
+</div>
+<footer class="Footer">
+©2023 WNC │ LQ82 Dash cam R6600 000.00.000
+</footer>
+ <!-- Mainly scripts -->
+ <script src="js/jquery-2.1.1.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ 
+<script>
+$(document).ready(function () {
+    
+});
+   
+        
+</script>
+<script type="text/javascript">
+    //forgot password
+ 
+  var LoginTable =  document.getElementById("LoginTable");
+      ForgotPSTable =  document.getElementById("ForgotPSTable"),
+      LoginText= document.querySelector(".Login> font");
+  ForgotPSTable.setAttribute("style", "display:none;");
+
+  function GoForgotPS() {
+    ForgotPSTable.setAttribute("style", "display:block;");
+    LoginTable.setAttribute("style", "display:none;");
+    LoginText.textContent="Forgot password";
+  }
+  document.getElementById("Btn_ForgotPS").addEventListener("click", GoForgotPS);
+
+window.onload=function(){
+    
+}
+
+
+</script>
+</body>
+</html>
