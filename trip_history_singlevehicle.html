@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/plugins/board/board.css">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins/switchery/switchery.css">
+    <link rel="stylesheet" href="css/dash_cam.css">
+</head>
+<body onload="parent.location.hash='map'">
+<div id="currentPage" >triphistory</div> 
+<div id="wrapper"> 
+<div class="page-wrapper" >    
+    <div class="Nav">
+        <div class="Nav_left">
+            <a href="trip_history.html" class="Size40 Back"></a>
+            <h2> Speed Angel(Fleet name) </h2>
+        </div>
+        <div class="Nav_right">
+            <button class="Size40 Bell"><span class="Number">99</span></button>
+            <font class="Time"> <small>Thu, Jan 06</small> 12:00:00 </font>
+        </div>
+    
+    </div>
+
+    <!--內容區 start---->
+    <div class="Content" id="Content">
+    <div class="Content_left">
+
+        <div class="Btn_wrap">
+            <ul>
+                <a class="Btn Focus"  href="#" id="">
+                    <span class="Size30 Img_video "></span> 
+                    <span> Watch all video</span>
+                </a>
+
+                <a class="Btn " data-toggle="modal" data-target="#myModal3">
+                    <span> Select time period</span> 
+                    <span class="Size30 Img_arrow "></span> 
+                </a>
+                
+            </ul>
+        
+        </div>
+        <div class="modal inmodal fade" id="myModal3" tabindex="-1" role="dialog"  aria-hidden="true" >
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                
+                    <div class="Modal_wrap">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <div class="modal-header"><div class="Title_wrap">
+                            <div class="Size32 Img_decorate_dot"></div>
+                            <font class="Title_medium">Select time period</font>
+                        </div></div>
+                        <div class="modal-body">
+                            <table class="TwoField" >
+                                <tr>
+                                    <th>Recording start time</th>
+                                    <td><div class="" id="data_1"> <a name="DataPicker" id="DataPicker"></a>
+                                        <div class="input-group date">
+                                            <span class="input-group-addon"><i class=" Img_calendar "></i></span><input type="text" class="" value="03/04/2014">
+                                        </div>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <th>Recording length</th>
+                                    <td><select>
+                                        <option value="" >10 minutes</option>
+                                    </select>
+                                    </td>
+                                </tr>
+                            </table> 
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <div class="Btn_wrap">
+                        <ul>
+                            <a class="Btn" href="#" data-dismiss="modal">
+                                <span>cancel</span>
+                            </a>
+                            <a class="Btn" href="#" data-dismiss="modal">
+                                <span>view recording</span>
+                            </a>
+                        </ul>    
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Trip_Singlevehicle list">
+            <div class="Dashboard">
+                <font>
+                    <h1>74.8km</h1>
+                    <font class="NoteText_primary">Total distance travelled</font>
+                </font>
+                <font>
+                    <h3>L/100Km</h3>
+                    <font class="NoteText_primary">平均油耗</font>
+                    <h3>36mph</h3>
+                    <font class="NoteText_primary">Speed</font>
+                </font>
+            </div>
+            <div class="Icon_wrap">
+                <div class="Size24 Img_decorate_location"></div>
+                <font class="Title_medium">Depart address</font>
+            </div>
+            <div class="Area" >
+                <div class="Area_left">
+                    <font class="Time">15:00</font>
+                    <font class="Date">3/8</font>
+                </div>
+                <a class="Area_right Focus" href="#">
+                    <font>No. 520, Yuanyuan 2nd Road, Yuanyuan 2nd RoadHsin City</font>
+                    <font class="NoteText_light">latitude: 41.40338, longitude: 2.17403</font>
+                    <font class="Red_text">LDW and Set Belt</font>
+                </a>
+            </div>
+            <div class="Area" >
+                <div class="Area_left">
+                    <font class="Time">15:10</font>
+                    <font class="Date">3/8</font>
+                </div>
+                <a class="Area_right" href="#">
+                    <font>No. 1020, Yuanyuan 2nd Road, Hsinchu City</font>
+                    <font class="NoteText_light">latitude: 41.40338, longitude: 2.17403</font>
+                </a>
+            </div>
+            <div class="Icon_wrap">
+                <div class="Size24 Img_decorate_dot"></div>
+                <font class="Title_medium">Arrive address</font>
+            </div>
+            <div class="Area" >
+                <div class="Area_left">
+                    <font class="Time">15:20</font>
+                    <font class="Date">3/8</font>
+                </div>
+                <a class="Area_right" href="#">
+                    <font>No. 520, Yuanyuan 2nd Road, Hsinchu CityYuanyuan 2nd Road</font>
+                    <font class="NoteText_light">latitude: 41.40338, longitude: 2.17403</font>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="Content_right">
+        <div class="Video_wrape">
+            <div class="Video">
+                <noscript>下載影片錯誤 !  </noscript>
+                <video id="video1"   poster=""   controls preload="none" >
+                <source src="video/5GvRAN.mp4" type="video/mp4">  
+                </video>
+            </div>
+            <div class="Info">
+                <div class="Live">Live</div>
+                <div class="Panel">
+                    <ul>
+                        <li><a class="Size40 Img_mic_on_small" href="#"></a></li>
+                        <li><a class="Size40 Img_camera_1" href="#"></a></li>
+                        <li><a class="Size40 Img_sound_on" href="#"></a></li>
+                        <li><a class="Size40 Img_screen_turn_h" href="#"></a></li>
+                        <li><font>Inward.<small>15:00:00 2023/12/01</small></font></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="Video_wrape">
+            <div class="Video">
+                <noscript>下載影片錯誤 !  </noscript>
+                <video id="video1"   poster=""   controls preload="none" >
+                <source src="video/5GvRAN.mp4" type="video/mp4">  
+                </video>
+            </div>
+            <div class="Info">
+                <div class="Live">Live</div>
+                <div class="Panel">
+                    <ul>
+                        <li><a class="Size40 Img_mic_on_small" href="#"></a></li>
+                        <li><a class="Size40 Img_camera_1" href="#"></a></li>
+                        <li><a class="Size40 Img_sound_on" href="#"></a></li>
+                        <li><a class="Size40 Img_screen_turn_h" href="#"></a></li>
+                        <li><font>Outward.<small>15:00:00 2023/12/01</small></font></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+</div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+
+<script>
+$(document).ready(function () {
+    $.get("accordion_menu.html", function(html) {
+        $("#wrapper").prepend(html);
+        
+    })
+    $('#data_1 .input-group.date').datepicker({
+        todayBtn: "linked",
+        keyboardNavigation: false,
+        forceParse: false,
+        calendarWeeks: true,
+        autoclose: true
+     });  
+        
+});
+          
+</script>
+</body>
+</html>
+

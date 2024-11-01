@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/plugins/board/board.css">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins/switchery/switchery.css">
+    <link rel="stylesheet" href="css/dash_cam.css">
+	<link rel="stylesheet" href="css/plugins/side-menu/side-menu.css">
+</head>
+<body>
+    <!--menu start---->
+
+	<aside id="sidebar" class="sidebar">
+		
+        <nav class="navbar-default navbar-static-side  " role="navigation">
+            <div class="sidebar-collapse">
+            <div class="Logo" onclick="location.href='../trip_history.html'"></div>
+            <font class="Product_name">LQ82</font>
+			<!--<nav class="menu open-current-submenu" id="side-menu">-->
+			 <nav class="menu open-current-submenu">
+                <ul >
+                <li id="MAP" class="menu-item">
+                    <a href="#"> 
+						<span class="Size30 Img_Map"></span>
+						<span class="menu-title">Map</span>
+					</a>
+                </li>                
+                <li id="TRIPHISTORY" class="menu-item">
+                    <a href="trip_history.html"> 
+						<span class="Size30 Img_TripHistory"></span>
+						<span class="menu-title">Trip history</span>
+					</a>
+                </li>
+					
+					
+                <li class="menu-item sub-menu">
+                    <a href="#"> 
+						<span class="Size30 Img_Administrator"></span>
+						<span class="menu-title">Administrator</span>
+					</a>
+                    <ul class="nav-second-level sub-menu-list" >
+                        
+                        <li id="ADMINISTRATORACCOUNT" class="menu-item">
+							<a href="#">
+								<span class="menu-title">Administrator account</span></a>
+						</li>         
+                        <li id="SETUPTRIP" class="menu-item">
+							<a href="setup_trip.html">
+								<span class="menu-title">Set up trip</span>
+							</a>
+						</li> 
+                     </ul>
+                </li>
+					
+					
+					
+					
+                <li id="VEHICLESETTING" class="menu-item">
+                    <a href="#"> 
+						<span class="Size30 Img_Setting"></span>
+						<span class="menu-title">Vehicle setting</span>
+					</a>
+                </li>
+                <li class="menu-item sub-menu" >
+                    <a href="#">  
+						<span class="Size30 Img_Notification"></span>
+						<span class="menu-title">Notification</span> 
+					</a>
+                    <ul class="nav-second-level sub-menu-list" >
+                        
+                        <li id="NOTIFICATIONLIST" class="menu-item">
+							<a href="notification_list.html">
+								<span class="menu-title">Notification list</span>
+							</a>
+						</li>         
+                        <li id="NOTIFICATIONSETTING">
+							<a href="#">
+								<span class="menu-title">Notification setting</span>
+							</a></li> 
+                     </ul>
+                </li>
+                <li id="LOG"  class="menu-item">
+                    <a href="#"> 
+						<span class="Size30 Img_Log"></span>
+						<span class="menu-title">Log</span></a>
+                </li>
+            </ul>
+			  </nav>
+          <button type="button"  id="btn-collapse" class="sidebar-collapser"></button>
+          <button type="button"  id="btn-toggle" class="sidebar-toggler"></button>
+        </div>
+         </nav>
+	</aside>
+	<div id="overlay" class="overlay"></div>
+
+ <!-- Mainly scripts -->
+ <script src="js/jquery-2.1.1.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script> 
+
+ <script src="js/common.js"></script>
+<script src="js/plugins/side-menu/side-menu.js"></script>
+</body>
+</html>

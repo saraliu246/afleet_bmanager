@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/plugins/board/board.css">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins/switchery/switchery.css">
+    <link rel="stylesheet" href="css/dash_cam.css">
+</head>
+<body onload="parent.location.hash='setup_trip'">
+
+<div id="currentPage" >setuptrip</div> 
+<div id="wrapper" > 
+ <div class="page-wrapper" >
+    <div class="Nav">
+        <div class="Nav_left">
+            <h2>Set up trip </h2>
+        </div>
+        <div class="Nav_right">
+            <button class="Size40 Bell"><span class="Number">99</span></button>
+            <font class="Time"> <small>Thu, Jan 06</small> 12:00:00 </font>
+        </div>
+    
+    </div>
+
+    <!--內容區 start---->
+    <div class="Content Sortable" id="Content">
+        <div class="Content_left list">
+            <table class="TwoField" >
+                <tr>
+                    <th>Assign to</th>
+                    <td><select style="width:100%">
+                        <option value="" >select vehicle</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <th colspan="2"> <hr class="LineinTable"></th>
+                </tr>
+                <tr>
+                    <th>Depart address</th>
+                    <td><input name='' type='text' id="" value="" placeholder="address" style="width:100%" /></td>
+                </tr>
+                <tr>
+                    <th colspan="2"> <hr class="LineinTable"></th>
+                </tr>
+                <tr>
+                    <th>End location</th>
+                    <td><input name='' type='text' id="" value="" placeholder="address" style="width:100%" /></td>
+                </tr>
+                <tr>
+                    <th colspan="2"> <hr class="LineinTable"></th>
+                </tr>
+                
+            </table>
+            <div class="Set_description" id="Set_description">
+                <button type="button" class="Img_add Size30" id="Btn_add"></button>
+                <p>Set intermediate waypoints. Please enter the addresses.</p>
+            </div>
+            
+            <div class="" id="sortable-view">
+                <div class="Stop_wrap">
+                    <!-- <div class="Stop">
+                        <font>Stop</font>
+                        <font>2</font>
+                    </div>
+                    <div class="Stop">
+                        <font>Stop</font>
+                        <font>1</font>
+                    </div> -->
+                </div>
+               
+                <div class="col-lg">
+                            <!-- <div class="Move">
+                                <button class="Img_delete Size30" type="button"></button>
+                                <input type="text" class="Address" placeholder="address">
+                                <div class="ibox-title Img_sort Size30"> </div> 
+                            </div>
+                            <div class="Move">
+                                <button class="Img_delete Size30" type="button"></button>
+                                <input type="text" class="Address" placeholder="address">
+                                <div class="ibox-title Img_sort Size30"> </div> 
+                            </div> -->
+                        
+                </div>
+        
+            </div>
+            <div class="Btn_wrap">
+                <ul>
+                    <a href="#" class="Btn_dark">Cancel</a>
+                    <a href="#" class="Btn_dark"  data-toggle="modal" data-target="#myModal5" >Apply</a>
+                </ul>
+            </div>
+        </div>
+        <div class="modal inmodal fade" id="myModal5" tabindex="-1" role="dialog"  aria-hidden="true" >
+            <div class="modal-dialog">
+                    <div class="modal-content"> 
+                        <div class="modal-body">
+                        <h1>Succeeded</h1>
+                        <div class="Img_Succeed Center"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="Btn_wrap">
+                            <ul>
+                                <a class="Btn_dark" href="#" data-dismiss="modal">OK</a>
+                            </ul>    
+                        </div>
+                        </div>
+                    </div> 
+            </div>
+            </div>
+    
+    <!--google map---->
+        <div class="Content_right">
+
+        <iframe src="google_map/google_map.html" 
+        width="100%" name="LinkMenu" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        id="LinkMenu" marginwidth="0" marginheight="0"  scrolling="yes" 
+        frameborder="0"  onload="Javascript:SetCwinHeight()" onresize="Javascript:SetCwinHeight()"></iframe> 
+    
+        </div>
+    </div>
+
+    </div>
+</div>
+</div>
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script> 
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script>
+$(document).ready(function () {
+    $.get("accordion_menu.html", function(html) {
+        $("#wrapper").prepend(html);
+    })     
+	 WinMove(); 
+	
+    var Ui_Sortable = document.querySelector(".ui-sortable"),
+        Stop_Wrap = document.querySelector(".Stop_wrap"),
+        NOW = document.querySelectorAll(".Stop").length;
+
+    document.querySelector("#Btn_add").addEventListener("click", function() {
+        AddTag();
+        updateStopNumbers();
+    })
+
+
+    Ui_Sortable.addEventListener("click", function(value) {
+        if(value.target.classList.contains("Img_delete")) {
+            var RemoveDiv = value.target.closest(".Move");
+            if(RemoveDiv) {
+                RemoveTag(RemoveDiv);
+                NOW--;
+                updateStopNumbers();
+            }
+        }
+    })
+
+
+    function AddTag() {
+        /** 篩選**/
+        const $CreatDiv= function(value) {
+            return document.createElement(value);
+        }
+
+        var Move_Div = $CreatDiv("div"),
+            First_Child = Ui_Sortable.firstChild,
+            Delete_Btn = $CreatDiv("button"),
+            Address_Input = $CreatDiv("input"),
+            Sort_Div = $CreatDiv("div"),
+            Stop_Div = $CreatDiv("div"),
+            First_Stop = Stop_Wrap.firstChild,
+            Font1 = $CreatDiv("font"),
+            Font2 = $CreatDiv("font");
+       
+        Move_Div.className = "Move";
+      //  Ui_Sortable.insertBefore(Move_Div, First_Child);
+        Ui_Sortable.insertBefore(Move_Div, First_Child.nextSibling);
+        Delete_Btn.className = "Img_delete Size30";
+        Move_Div.appendChild(Delete_Btn);
+
+        Address_Input.className = "Address";
+        Address_Input.placeholder = "address";
+        Address_Input.type = "text";
+        Move_Div.appendChild(Address_Input);
+
+        Sort_Div.className = "ibox-title Img_sort Size30";
+        Move_Div.appendChild(Sort_Div);
+        
+        /** 文字**/
+        Stop_Div.className = "Stop";
+        Stop_Wrap.insertBefore(Stop_Div, First_Stop);
+        Font1.innerText = "Stop";
+        Stop_Div.appendChild(Font1);
+
+        NOW++;
+        Font2.textContent = NOW;
+        Stop_Div.appendChild(Font2);
+        
+        // 重新排序 Stop 元素
+        var stopElements = document.querySelectorAll('.Stop'),
+            sortedStops = Array.from(stopElements).sort((a, b) => b.querySelector('font').textContent - a.querySelector('font').textContent);
+        Stop_Wrap.innerHTML = '';
+        sortedStops.forEach(stop => Stop_Wrap.appendChild(stop));
+    }
+
+    function RemoveTag(value) {
+        var AllAdd_Div = document.querySelectorAll(".Move");
+        if(AllAdd_Div.length > 1) {
+            Ui_Sortable.removeChild(value);
+            Stop_Wrap.removeChild(Stop_Wrap.lastChild);
+        }
+    }
+
+   function updateStopNumbers() {
+        var StopAll= document.querySelectorAll(".Stop font:last-child");
+        var NOW=0;
+        StopAll.forEach(function(value) {
+            NOW++;
+            value.textContent= NOW;
+        })
+   }
+    
+});  
+
+
+</script>
+</body>
+</html>

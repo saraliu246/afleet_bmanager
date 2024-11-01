@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/plugins/board/board.css">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins/switchery/switchery.css">
+    <link rel="stylesheet" href="css/dash_cam.css">
+    <style>
+        .modal-dialog { width:430px; margin: 0 auto; }
+        /* .modal-backdrop.in { display:block;} */
+    </style>
+</head>
+<body onload="parent.location.hash='notificationlist'">
+<div id="currentPage" >notificationlist</div> 
+<div id="wrapper"> 
+<div class="page-wrapper" >
+    <div class="Nav">
+        <div class="Nav_left">
+            <h2> Notification List </h2>
+            </div>
+        <div class="Nav_right">
+            <button class="Size40 Bell"><span class="Number">99</span></button>
+            <font class="Time"> <small>Thu, Jan 06</small> 12:00:00 </font>
+        </div>
+    
+    </div>
+
+    <!--內容區 start---->
+    <div class="Content" id="Content">
+    <div class="Content_left">
+        <div class="Tab_wrap" id="Tab_wrap">
+            <ul>
+                <li><a class="Btn tablinks" id="defaultOpen" onclick="OPEN(event, 'Allnotification')">All notification</a></li>
+                <li><a class="Btn tablinks" onclick="OPEN(event, 'Urgent')">Urgent</a></li>
+            </ul>
+        </div>	
+        <div class="Noti_list list tabcontent" id="Allnotification">
+            <button class="BtnLink"  id="Open_Nodata" > clear all(99) </button>
+            <ul>
+            <li class=" event"  >
+                <span>event <span class="Size24 Img_decorate_danger"></span></span>
+                <button class="Call"  type="button" data-toggle="modal" data-target="#myModal6"></button>
+                <font class="Font16">Collision warning for 1234568 8987879797 54544 56546 <strong> Speed Angel</strong></font>
+                <font class="Date">10 seconds ago</font>
+            </li>
+            <li class=" dashcam"  >
+                <span>dash cam</span>
+                <font class="Font16">Collision warning for <strong> Speed Angel</strong></font>
+                <font class="Date">10 seconds ago</font>
+            </li>
+            <li class=" dashcam"  >
+                <span>dash cam</span>
+                <font class="Font16">Collision warning for <strong> Speed Angel</strong></font>
+                <font class="Date">10 seconds ago</font>
+            </li>
+            <li class=" event"  >
+                <span>event</span>
+                <font class="Font16">Collision warning for <strong> Speed Angel</strong></font>
+                <font class="Date">10 seconds ago</font>
+            </li>
+        </ul>
+        </div>
+        <div class="Noti_list list tabcontent" id="Urgent">
+            2222
+        </div>
+    
+    </div>
+
+    <div class="Content_right">
+
+    <iframe src="google_map/google_map.html" 
+    width="100%" name="LinkMenu" 
+    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    id="LinkMenu" marginwidth="0" marginheight="0"  scrolling="yes" 
+    frameborder="0"  onload="Javascript:SetCwinHeight()" onresize="Javascript:SetCwinHeight()"></iframe> 
+    
+    </div>
+
+
+            
+    <div class="modal inmodal fade" id="myModal6" tabindex="-1" role="dialog"  aria-hidden="true" >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title">LTE disconnected for 2 vehicles.</h4>
+                        </div> 
+                        <div class="modal-body">
+                            <div class="Call_list">
+                                <ul>
+                                    <li>
+                                        <font class="Vehicle_name">Speed Angel</font>
+                                        <font class="Fleet_name">Fleet name</font>
+                                        <p>│dash cam number</p>
+                                    <div class="Btn_wrap">
+                                            <a class="Btn" href="#" data-toggle="modal" data-target="#myModal5">
+                                                <span class="Size30 Img_phone"></span> 
+                                                <span> Call driver </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <font class="Vehicle_name">ABC-1234</font>
+                                        <font class="Fleet_name">Fleet name</font>
+                                        <p>│dash cam number</p>
+                                    <div class="Btn_wrap">
+                                            <a class="Btn" href="#" data-toggle="modal" data-target="#myModal5">
+                                                <span class="Size30 Img_phone"></span> 
+                                                <span> Call driver </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+    </div>
+    <div class="modal inmodal fade" id="myModal5" tabindex="-1" role="dialog"  aria-hidden="true" >
+                <div class="modal-dialog">
+                    <div class="modal-content"> 
+                        <div class="modal-body">
+                            <div class="Size40 Img_car"></div>
+                            <font class="Font16">Would you like to make <strong>Speed Angel</strong> a call ?</font>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <div class="Btn_wrap">
+                            <ul>
+                                <a class="Btn" href="#" data-dismiss="modal">
+                                    <span class="Size30 Img_ignore"></span>
+                                    <span>cancel</span>
+                                </a>
+                                <a class="Btn" id="Answer" href="#" data-dismiss="modal">
+                                    <span class="Size30 Img_answer"></span>
+                                    <span>yes</span>
+                                </a>
+                            </ul>    
+                        </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+            
+    </div>
+    <div class="Video_bg " id="Video_bg">
+        <div class="Font_wrap">
+        <font>Speed Angel</font>
+        <div class="Btn_wrap">
+        <a class="Btn RedBtn" id="RedBtn" href="#">
+            <span class="Size30 Img_answer-w"></span>
+            <span>End a call</span>
+        </a>
+        </div>
+        <button type="button" class="Size30 Img_Zoom_outdark"></button>
+        </div>
+        <div class="Video_wrape">
+            <div class="Video">
+                <noscript>下載影片錯誤 !  </noscript>
+                <video id=""   poster=""   controls preload="none" >
+                <source src="video/5GvRAN.mp4" type="video/mp4">  
+                </video>
+            </div>
+            <div class="Info">
+                <div class="Live">Live</div>
+                <div class="Panel">
+                    <ul>
+                        <li><a class="Size40 Img_mic_on_small" href="#"></a></li>
+                        <li><a class="Size40 Img_camera_1" href="#"></a></li>
+                        <li><a class="Size40 Img_sound_on" href="#"></a></li>
+                        <li><a class="Size40 Img_screen_turn_h" href="#"></a></li>
+                        <li><font>Inward.<small>15:00:00 2023/12/01</small></font></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="Video_wrape">
+            <div class="Video">
+                <noscript>下載影片錯誤 !  </noscript>
+                <video id=""   poster=""   controls preload="none" >
+                <source src="video/5GvRAN.mp4" type="video/mp4">  
+                </video>
+            </div>
+            <div class="Info">
+                <div class="Live">Live</div>
+                <div class="Panel">
+                    <ul>
+                        <li><a class="Size40 Img_mic_on_small" href="#"></a></li>
+                        <li><a class="Size40 Img_camera_1" href="#"></a></li>
+                        <li><a class="Size40 Img_sound_on" href="#"></a></li>
+                        <li><a class="Size40 Img_screen_turn_h" href="#"></a></li>
+                        <li><font>Outward.<small>15:00:00 2023/12/01</small></font></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+ <!-- Mainly scripts -->
+ <script src="js/jquery-2.1.1.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ 
+<script>
+$(document).ready(function () {
+    $.get("accordion_menu.html", function(html) {
+        $("#wrapper").prepend(html);
+        
+    }) 
+    document.getElementById("Open_Nodata").addEventListener("click", function() {
+        document.querySelector("#Allnotification").innerHTML= `<div class="No_data" id="No_data"><span></span><font>no data</font></div>`;
+    })   
+});
+   
+        
+</script>
+<script type="text/javascript">
+  function OPEN(EVT, TYPE) {
+        var i, tabcontent, tablinks;
+        var tabcontent= document.getElementsByClassName("tabcontent");
+        var tablinks= document.getElementsByClassName("tablinks");
+        for(var i=0; i<tabcontent.length; i++) {
+            tabcontent[i].style.display="none";
+        }
+       
+        for(var i=0; i<tablinks.length; i++) {
+            tablinks[i].className= tablinks[i].className.replace("Focus", "");
+        }
+        document.getElementById(TYPE).style.display="block";
+        EVT.currentTarget.className += " Focus";
+    }
+    document.getElementById("defaultOpen").click();
+
+window.onload=function(){
+    var Video_bg = document.getElementById("Video_bg"),
+        Size30 = document.querySelector(".Video_bg .Btn_wrap+.Size30"),
+        RedBtn = document.getElementById("RedBtn"),
+        Answer = document.getElementById("Answer"),
+        modal= document.querySelectorAll(".modal-backdrop");
+
+    Size30.addEventListener("click", function() {       
+
+        if(Video_bg.classList.contains("Video_zoomOut")) {
+            Video_bg.classList.remove("Video_zoomOut");
+            Size30.classList.remove("Img_Zoom_indark");
+            Size30.classList.add("Img_Zoom_outdark");
+        }else {
+            Video_bg.classList.add("Video_zoomOut");
+            Size30.classList.remove("Img_Zoom_outdark");
+            Size30.classList.add("Img_Zoom_indark");
+        }
+               
+    });
+   
+    Answer.addEventListener("click", function() {
+        Video_bg.setAttribute("style", "display:block");
+        for(var i=0; i<modal.length; i++) {
+            var modal_all= modal[i];
+            modal_all.classList.remove("in");
+        }
+        document.querySelector(".modal.inmodal").classList.remove("in");
+    })
+
+    RedBtn.addEventListener("click", function() {
+        var Modal = document.querySelectorAll(".modal-backdrop");
+        for(var i=0; i< Modal.length; i++) {
+            var Modal_all= Modal[i];
+            Modal_all.setAttribute("style", "display:none");
+        }
+        
+        var myModal6 = document.getElementById("myModal6");
+        myModal6.setAttribute("style", "display:none");
+        Video_bg.setAttribute("style", "display:none");
+    })
+   
+    
+   
+}
+  
+
+   
+</script>
+</body>
+</html>
