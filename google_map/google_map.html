@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <!--CSS一定要給地圖一個寬度和高度，不然他會不知道要給你多大張的地圖~-->
+    <style>
+      body, html, #map  { width: 100%; height: 100%; margin: 0; padding: 0;}
+      #map { }
+    </style>
+  </head>
+	
+	
+  <body>
+    <div id="map"></div> <!--這一行 是必要元素-->
+
+<script>
+
+let map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: new google.maps.LatLng(-33.91722, 151.23064),
+    zoom: 16,
+    mapId:'135e5c5ebd484cf9',
+  });
+
+  const iconBase = "http://design.wneweb.com.tw/3836/01/img/icon/";
+  const icons = {
+    parking: {
+      icon: iconBase + "parking-s.svg",
+    },
+    active: {
+      icon: iconBase + "active-s.svg",
+    },
+    idling: {
+      icon: iconBase + "idling-s.svg",
+    },
+    event: {
+      icon: iconBase + "event-s.svg",
+    },
+    disconnect: {
+      icon: iconBase + "disconnect-s.svg",
+    },
+  };
+  const features = [
+    {
+      position: new google.maps.LatLng(-33.91721, 151.2263),
+      type: "idling",
+    },
+    {
+      position: new google.maps.LatLng(-33.91539, 151.2282),
+      type: "disconnect",
+    },
+    {
+      position: new google.maps.LatLng(-33.91747, 151.22912),
+      type: "disconnect",
+    },
+    {
+      position: new google.maps.LatLng(-33.9191, 151.22907),
+      type: "parking",
+    },
+    {
+      position: new google.maps.LatLng(-33.91725, 151.23011),
+      type: "idling",
+    },
+    {
+      position: new google.maps.LatLng(-33.91872, 151.23089),
+      type: "idling",
+    },
+    {
+      position: new google.maps.LatLng(-33.91784, 151.23094),
+      type: "active",
+    },
+    {
+      position: new google.maps.LatLng(-33.91682, 151.23149),
+      type: "active",
+    },
+    {
+      position: new google.maps.LatLng(-33.9179, 151.23463),
+      type: "active",
+    },
+    {
+      position: new google.maps.LatLng(-33.91666, 151.23468),
+      type: "event",
+    },
+    {
+      position: new google.maps.LatLng(-33.916988, 151.23364),
+      type: "info",
+    },
+    {
+      position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
+      type: "event",
+    },
+    {
+      position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
+      type: "event",
+    },
+    {
+      position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
+      type: "event",
+    },
+    {
+      position: new google.maps.LatLng(-33.919543720969806, 151.23112279762267),
+      type: "event",
+    },
+    {
+      position: new google.maps.LatLng(-33.91608037421864, 151.23288232673644),
+      type: "parking",
+    },
+    {
+      position: new google.maps.LatLng(-33.91851096391805, 151.2344058214569),
+      type: "parking",
+    },
+    {
+      position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
+      type: "parking",
+    },
+    {
+      position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
+      type: "active",
+    },
+  ];
+
+  // Create markers.
+  for (let i = 0; i < features.length; i++) {
+    const marker = new google.maps.Marker({
+      position: features[i].position,
+      icon: icons[features[i].type].icon,
+      map: map,
+    });
+  }
+}
+
+window.initMap = initMap;
+    </script>
+	  
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJzqX82_gIcVrLCi7KBG180-wNB7J_zPU&callback=initMap">
+    </script>
+     <!--一定要掛載於你要讓地圖出現的頁面中！並置入你申請的API Key--> <!--掛載的JS裡有一個函數callback=initMap，原理是他先去請求你的API Key-->
+   
+</body>
+</html>
